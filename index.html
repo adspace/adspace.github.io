@@ -42,7 +42,7 @@
 			  <img src="images/logo.jpg" class="img-responsive" alt=""/>
 	        </a>
 		</div>
-				<div class="top-nav wow bounce" data-wow-delay="0.4s">
+				<div class="top-nav">
 				    <span class="menu"> </span>
 					<ul>
 						<li class="active"><a href="index.html">首页</a></li>
@@ -52,12 +52,19 @@
 					  	<li><a href="contact.html">联系我们</a></li>		
 					</ul>
 				<!-- script-nav -->
-			<script>
-			$("span.menu").click(function(){
-				$(".top-nav ul").slideToggle(500, function(){
+				<script>
+				$("span.menu").click(function(){
+					$(".top-nav ul").slideToggle(500);
 				});
-			});
-			</script>
+
+				<!-- script-nav 手机下拉菜单隐藏-->
+				$(document).click(function(event) {
+					var target = $(event.target);
+					if (!target.closest('.top-nav').length && !target.closest('span.menu').length) {
+						$(".top-nav ul").slideUp(500);
+					}
+				});
+				</script>
 			<!-- //script-nav -->
 				</div>
 				<div class="clearfix"> </div>
@@ -245,7 +252,7 @@
 		 </div>
 	</div>
 	<div class="copy">
-	    <p>版权所有 &copy; 2015. <a target="_blank" href="http://www.baikeps.cn/">公司名称</a>保留所有权利。</p>
+	    <p>版权所有 &copy; 2015. 保留所有权利。<a target="_blank" href="https://www.baikeps.cn/">公司名称</a></p>
     </div>
 
 </body>

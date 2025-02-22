@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Single</title>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.useso.com/css?family=Lato:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!------ light-box-script ----->
+<script src="js/jquery.chocolat.js"></script>
+<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
+<script type="text/javascript" charset="utf-8">
+	$(function() {
+		$('.about-grid a').Chocolat({linkImages:false});
+	});
+</script>
+<!------ light-box-script ----->
+<!----font-Awesome----->
+<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+<!----font-Awesome----->
+</head>
+<body>
+<div class="header_about"> </div>
+   <div class="header-home">
+	<div class="fixed-header">
+		<div class="logo">
+			<a href="index.html">
+	          <span class="secondary">Careers,skills</span>
+	          <span class="main">Ability</span>
+	        </a>
+		</div>
+				<div class="top-nav">
+				    <span class="menu"> </span>
+					<ul>
+						<li><a href="index.html">首页</a></li>
+					  	<li><a href="about.html">关于我们</a></li>
+					  	<li><a href="services.html">服务</a></li>
+					  	<li class="active"><a href="blog.html">博客</a></li>
+					  	<li><a href="contact.html">联系我们</a></li>		
+					</ul>
+				<!-- script-nav -->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500);
+					});
+	
+					<!-- script-nav 手机下拉菜单隐藏-->
+					$(document).click(function(event) {
+						var target = $(event.target);
+						if (!target.closest('.top-nav').length && !target.closest('span.menu').length) {
+							$(".top-nav ul").slideUp(500);
+						}
+					});
+					</script>
+				<!-- //script-nav -->
+	
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+        <!--script-->
+		<script>
+			$(document).ready(function(){
+				$(".top-nav li a").click(function(){
+					$(this).parent().addClass("active");
+					$(this).parent().siblings().removeClass("active");
+				});
+			});
+		</script>
+			<!-- script-for sticky-nav -->
+		<script>
+		$(document).ready(function() {
+			 var navoffeset=$(".header-home").offset().top;
+			 $(window).scroll(function(){
+				var scrollpos=$(window).scrollTop(); 
+				if(scrollpos >=navoffeset){
+					$(".header-home").addClass("fixed");
+				}else{
+					$(".header-home").removeClass("fixed");
+				}
+			 });
+			 
+		});
+		</script>
+		<!-- /script-for sticky-nav -->
+	<!--//header-->
+   <div class="grid_4">
+		<div class="container"> 
+			<h1 class="blog_head">博客</h1>
+		   
+		    <div class="blog_grid">
+		      <div class="blog_box">
+		        <a href="single.html" class="mask"><img src="images/b5.jpg" alt="image" class="img-responsive zoom-img" alt=""/></a>
+		     	<h3><a href="single.html">我们提供高质量的教育服务，帮助学生实现他们的学术目标。</a></h3>
+		     	<div class="links">
+		  		    <ul>
+		  				<li><i class="fa blog-icon fa-calendar"> </i><span>2013年6月14日</span></li>
+		  				<li><i class="fa blog-icon fa-user"> </i><span>管理员</span></li>
+		  				<li><i class="fa blog-icon fa-comment"> </i><a href="#"><span>暂无评论</span></a></li>
+		  		    </ul>
+		  		</div>
+		     	<p>我们提供高质量的教育服务，帮助学生实现他们的学术目标。我们的课程涵盖广泛的学科，由经验丰富的教师授课，确保学生获得最佳的学习体验。</p>
+		     </div>  
+		   </div>
+		   <div class="comment">
+		  		        	<h2>评论</h2>
+		  		        	<ul class="comment-list">
+		  		        	  <li><img src="images/pic12.jpg" alt="">
+		  		        		 <div class="desc1">
+		  		        			<h5><a href="#">Lorem ipsum dolor sit amet</a></h5>
+		  		        			<div class="extra">
+					                  <time pubdate="" datetime="2014-03-30T14:47:59">
+						                 由管理员提交于2014年1月30日 - 14:47					</time>
+					                </div>
+			                        <p>我们提供高质量的教育服务，帮助学生实现他们的学术目标。我们的课程涵盖广泛的学科，由经验丰富的教师授课，确保学生获得最佳的学习体验。</p>
+			                        <div class="reply"><a class="comment-reply-link" href="#">回复</a></div>
+		  		        		   </div>
+		  		        		   <div class="clearfix"></div>
+		  		        		</li>
+		  		        	</ul>
+		  </div>
+		  <div class="comments-area">
+		  		        	<h3>添加新评论</h3>
+							<form>
+								<p>
+									<label>姓名</label>
+									<span>*</span>
+									<input type="text" value="">
+								</p>
+								<p>
+									<label>邮箱</label>
+									<span>*</span>
+									<input type="text" value="">
+								</p>
+								<p>
+									<label>网站</label>
+									<input type="text" value="">
+								</p>
+								<p>
+									<label>主题</label>
+									<span>*</span>
+									<textarea></textarea>
+								</p>
+								<p>
+									<label class="btn1 btn2 btn-8 btn-8c"><input type="submit" value="提交评论"></label>
+								</p>
+							</form>
+		    </div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+		  <div class="footer_top">
+			<div class="col-sm-3">
+			   <ul class="list1">
+			   	<h3>浏览</h3>
+			   	 <li><a href="#">价格</a></li>
+			   	 <li><a href="#">课程</a></li>
+			   	 <li><a href="#">博客</a></li>
+			     <li><a href="#">联系方式</a></li>
+			   </ul>
+			</div>
+			<div class="col-sm-3">
+			  <ul class="list1">
+			    <h3>下一个课程</h3>
+			   	 <li><a href="#">生物学</a></li>
+			   	 <li><a href="#">管理学</a></li>
+			   	 <li><a href="#">历史</a></li>
+			   	 <li><a href="#">文学</a></li>
+			  </ul>
+			</div>
+			<div class="col-sm-3">
+			  <ul class="list1">
+			  	<h3>关于学习</h3>
+			   	 <li><a href="#">关于我们</a></li>
+			   	 <li><a href="#">申请</a></li>
+			   	 <li><a href="#">条款和条件</a></li>
+			   	 <li><a href="#">注册</a></li>
+			  </ul>
+			</div>
+			<div class="col-sm-3">
+			  <ul class="socials">
+                 <li><a href="#"><i class="fa fb fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa tw fa-twitter"></i></a></li>
+              </ul>
+              <ul class="list2">
+				<li><strong class="phone">+0018 58287 58</strong><br><small>周一 - 周五 / 9.00AM - 06.00PM</small></li>
+				<li>问题? <a href="malito:mail@demolink.org">mail(at)ability.com</a></li>
+			  </ul>
+			</div>
+			<div class="clearfix"> </div>
+		   </div>
+		 </div>
+	</div>
+	<div class="copy">
+	    <p>版权所有 &copy; 2015. 保留所有权利。<a target="_blank" href="https://www.baikeps.cn/">公司名称</a></p>
+    </div>
+
+</body>
+</html>
