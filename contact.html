@@ -38,13 +38,21 @@
 					  	<li class="active"><a href="contact.html">联系我们</a></li>	
 					</ul>
 				<!-- script-nav -->
-			<script>
-			$("span.menu").click(function(){
-				$(".top-nav ul").slideToggle(500, function(){
-				});
-			});
-			</script>
-			<!-- //script-nav -->
+				<script>
+					$("span.menu").click(function(){
+						$(".top-nav ul").slideToggle(500);
+					});
+	
+					<!-- script-nav 手机下拉菜单隐藏-->
+					$(document).click(function(event) {
+						var target = $(event.target);
+						if (!target.closest('.top-nav').length && !target.closest('span.menu').length) {
+							$(".top-nav ul").slideUp(500);
+						}
+					});
+					</script>
+				<!-- //script-nav -->
+	
 				</div>
 				<div class="clearfix"> </div>
 			</div>
